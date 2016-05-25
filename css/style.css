@@ -1,0 +1,916 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {max-width: 100%;}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: separate; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:after { content: " "; display: block; clear: both; }
+
+
+											/*SITE STYLE*/
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	/*color: white;*/
+	text-decoration: none;
+}
+.main_width {
+  width: 1060px;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+}
+
+
+/*NAV*/
+
+header {
+  background-color: black;
+  width: 100%;
+  height: auto;
+	position: relative;
+}
+
+header a{
+	color: white;
+}
+
+.navigation li {
+  display: inline-block;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 10px 15px 10px 15px;
+}
+
+.navigation {
+text-align: right;
+}
+
+.after li {
+	/*border: 1px solid red;*/
+	color: white;
+	display: block;
+	text-align: center;
+}
+
+.after li::after{
+	content:"";
+	border: 15px solid black;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -29px;
+	right: 40px;
+}
+
+.after {
+	position: absolute;
+	top: 50px;
+	right: 188px;
+	background-color: black;
+}
+
+.after li {
+	font-size: 12px;
+}
+/*.main_width ul:first-child {
+	color: yellow;
+}*/
+
+#logotype {
+  font-size: 15px;
+	float: left;
+}
+
+.main_width span {
+  color:#24baa0;
+}
+
+ul.after {
+	/*position:absolute;
+	bottom: 150px;*/
+	/*border: 2px solid red;*/
+}
+
+/*END OF NAV*/
+
+
+/*SECTION MAIN_NAV STYLE*/
+
+.start_nav {
+width: 100%;
+height: 450px;
+background-color: background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 44%, rgba(210,209,217,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(44%, rgba(255,255,255,1)), color-stop(100%, rgba(210,209,217,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 44%, rgba(210,209,217,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 44%, rgba(210,209,217,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 44%, rgba(210,209,217,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 44%, rgba(210,209,217,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d2d1d9', GradientType=0 );
+}
+
+article.main_width{
+	width: 1060px;
+	height: 400px;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+.boxes > div {
+	width: 40%;
+  display:inline-block;
+}
+
+.boxes .photo_section {
+	width: 450px;
+	height:337px;
+  background-image: url("../images/black_chair.png");
+  background-repeat: no-repeat;
+	position:absolute;
+	left:0;
+	margin: 50px 25px 50px 50px;
+}
+
+
+.description_section {
+  float:right;
+	margin: 100px 100px 50px 25px;
+}
+
+.description_section h4 {
+	font-size: 30px;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	margin:10px;
+}
+
+.description_section span {
+	color:#24baa0;
+}
+
+.description_section > p {
+	color: #979797;
+	font-size: 15px;
+	line-height: 18px;
+	padding: 10px;
+	text-align: center;
+}
+
+.btn_more {
+	width:240px;
+	height: 55px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 21px;
+	padding: 5px;
+	background-color: #24baa0;
+	border: 2px solid #24baa0;
+	border-radius: 4px;
+	margin:20px 70px 30px 90px;
+	text-align: center;
+}
+
+
+.btn_prev a:link {
+	color: #24baa0;
+	text-decoration: none;
+	position: absolute;
+	left: 0;
+	font-size: 50px;
+	top: 180px;
+}
+
+.btn_prev a:hover {
+	position: absolute;
+	left: 0;
+	font-size: 60px;
+	font-weight: bold;
+	top: 180px;
+}
+
+.btn_next a:link {
+	color: #24baa0;
+	text-decoration: none;
+	position: absolute;
+	right: 0;
+	font-size: 50px;
+	top: 180px;
+}
+
+.btn_next a:hover {
+	position: absolute;
+	right: 0;
+	font-size: 60px;
+	font-weight: bold;
+	top: 180px;
+}
+
+
+
+/*END OF STYLE SECTION MAIN_NAV*/
+
+
+/*SECTION GALLERY */
+
+section.gallery {
+	clear: both;
+  width:100%;
+  height: 280px;
+	margin-top: 30px;
+}
+
+.gallery .main_width{
+	width: 1060px;
+	height: 300px;
+	position: relative;
+}
+
+.gallery .gallery_boxes > div {
+  width: 32%;
+	height: 250px;
+  display: inline-block;
+}
+.gallery .first_box {
+  background-image: url("../images/box1_img.jpg");
+  background-repeat: no-repeat;
+	float: left;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.first_box a:link{
+	color: #484848;
+	font-size: 15px;
+	text-decoration: none;
+	z-index: 1;
+	position: absolute;
+	bottom:45px;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding:20px;
+	width:97%;
+}
+
+.first_box h3:hover {
+	border-bottom: 6px solid #24baa0;
+	width: 45%;
+}
+
+.gallery .second_box {
+  background-image: url("../images/box2_img.jpg");
+  background-repeat: no-repeat;
+	float: left;
+	width: 100%;
+	height: auto;
+	position:relative;
+}
+
+.second_box a:link{
+	color: #484848;
+	font-size: 15px;
+	text-decoration: none;
+	z-index: 1;
+	position: absolute;
+	bottom:45px;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding:20px;
+	width:97%;
+}
+
+.second_box h3:hover {
+	border-bottom: 6px solid #24baa0;
+	width: 45%;
+}
+
+.third_box {
+	width: 100%;
+	height: auto;
+	border: 1px solid #dbdbdb;
+	float: right;
+	padding: 20px;
+}
+.third_box a:link {
+	color: #1f1f1f;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.third_box a:hover{
+	padding-right: 15px;
+	border-bottom: 6px solid #24baa0;
+}
+
+.third_box p {
+	font-size: 14px;
+	line-height: 18px;
+	color:#979797;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+/*END OF GALLERY SECTION*/
+
+/*PRICE_ITEM SECTION STYLE*/
+
+section.price_list {
+	clear: both;
+  width:100%;
+  height: 730px;
+	margin-top:40px;
+	background-color: #f1f1f1;
+}
+
+.price_list .main_width{
+	width: 1060px;
+	height: 730px;
+	position: relative;
+	/*border: 2px solid grey;*/
+}
+
+.price_list h3 {
+	font-size: 20px;
+	border-bottom: 6px solid #24baa0;
+	width: 32%;
+	padding-bottom: 5px;
+	padding-top: 40px;
+}
+
+.price_list .price_list_items table {
+	background-color: #f9f9f9;
+  width: 32%;
+	height: 500px;
+  display: inline-block;
+	border: 2px solid #d6d5d5;
+	margin-top: 90px;
+	position:relative;
+	margin-right: 3px;
+}
+
+/*FIRST_PRICE_ITEM STYLE*/
+
+
+
+.price_list .white_circle {
+	display: inline;
+	width: 55px;
+	height: 55px;
+	border-radius: 55px;
+	border: 2px solid #d7d6d6;
+	position: absolute;
+	top: 135px;
+	background-color: white;
+	z-index: 1;
+	margin-left: 139px;
+	margin-right: 139px;
+}
+
+.price_list .black_circle {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	position: absolute;
+	top: 14px;
+	margin-left: 12.5px;
+	background-color: #c2c2c2;
+	z-index: 1;
+}
+
+
+.first_price_item .description {
+	color: #24baa0;
+	font-size: 20px;
+	position: absolute;
+	left: 90px;
+	right: 90px;
+	top: 35px;
+}
+
+/*CIRCLE WITH PRICE*/
+
+.price_head {
+	color: #d7d6d6;
+	width: 130px;
+	height: 130px;
+	border-radius: 130px;
+	border: 2px solid #d7d6d6;
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	right: 90px;
+	background-color: white;
+}
+
+.first_price_item span {
+	color: #c2c2c2;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+}
+.price_head p {
+	color: #c2c2c2;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+/*END OF CIRCLE WITH PRICE*/
+
+
+.price_list_items tbody {
+	color: #8a8a8a;
+	font-size: 20px;
+	position: absolute;
+	top:240px;
+	width: 100%;
+}
+
+.first_price_item tbody td {
+	text-align: center;
+	padding: 10px;
+	width: 335px;
+}
+
+.first_price_item tr:first-child{
+	background-color: #e4e4e4;
+}
+
+.first_price_item tr:nth-child(2){
+	background-color:#f1f1f1;
+}
+
+.btn_enjoy {
+	position:absolute;
+	bottom: 20px;
+	left: 110px;
+	right: 110px;
+	width:120px;
+	height: 40px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 5px;
+	background-color: #24baa0;
+	border: 1px solid #24baa0;
+	border-radius: 4px;
+	text-align: center;
+}
+
+/*END OF first_price_item*/
+
+
+
+/*SECOND_PRICE_TEM STYLE*/
+
+.price_list .price_list_items .second_price_item {
+		background-color: #27c7ab;
+}
+
+.second_price_item .description {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	left: 60px;
+	right: 60px;
+	top: 35px;
+}
+.second_price_item .price_head {
+	color: #d7d6d6;
+	width: 130px;
+	height: 130px;
+	border-radius: 130px;
+	border: 1px solid #27c7ab;
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	right: 90px;
+	background-color: white;
+}
+
+.second_price_item span {
+	color: #27c7ab;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.second_price_item p {
+	color: #27c7ab;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+.second_price_item sup {
+	top: -20px;
+}
+.first_price_item sup {
+	top: -20px;
+}
+.third_price_item sup {
+	top: -20px;
+}
+
+.second_price_item tbody{
+	background-color: white;
+	text-align: center;
+	width:100%;
+}
+
+.second_price_item tbody td{
+	text-align: center;
+	padding: 10px;
+	width: 340px;
+}
+
+
+.second_price_item tr:nth-child(2){
+	background-color:#f1f1f1;
+}
+
+.second_price_item .btn_enjoy {
+	color:#24baa0;
+	background-color: white;
+}
+
+/*END OF SECOND_PRICE_ITEM STYLE*/
+
+
+/*THIRD_PRICE_ITEM STYLE*/
+
+.price_list .price_list_items .third_price_item {
+		background-color: #f9f9f9;
+}
+
+.third_price_item .white_circle{
+	width: 55px;
+	height: 55px;
+	border-radius: 55px;
+	border: 2px solid #d7d6d6;
+	position: absolute;
+	top: 0;
+	background-color: white;
+	z-index: 1;
+	margin-left: 130px;
+	margin-right: 139px;
+}
+
+.third_price_item .black_circle {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	position: absolute;
+	top: 50px;
+	margin-left: 50px;
+	background-color: #c2c2c2;
+	z-index: 1;
+}
+
+.third_price_item .description {
+	color: #27c7ab;
+	font-size: 20px;
+	position: absolute;
+	left: 60px;
+	right: 60px;
+	top: 35px;
+}
+
+.third_price_item span {
+	color: #c2c2c2;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.third_price_item tbody{
+	background-color: white;
+	text-align: center;
+	width: 100%;
+}
+
+.third_price_item tbody td{
+	text-align: center;
+	padding: 10px;
+	width: 341px;
+}
+
+.third_price_item tr:nth-child(2n+2){
+	background-color:#f1f1f1;
+}
+
+.third_price_item tr:nth-child(2n+1){
+	background-color:#e4e4e4;
+}
+
+/*.third_price_item tr:nth-child(n+2){
+	background-color:#f1f1f1;
+}*/
+
+.third_price_item .btn_enjoy {
+	color:white;
+	background-color: #27c7ab;
+}
+
+/*END OF PRICE_LIST_ITEMS SECTION*/
+
+
+/*CONTACT_FORM SECTION STYLE*/
+
+.contact_form h3 {
+	color: #575757;
+	font-size: 20px;
+	border-bottom: 6px solid #24baa0;
+	width: 32%;
+	padding-bottom: 5px;
+	padding-top: 40px;
+}
+
+.form{
+	margin-top: 50px;
+	margin-left: 5px;
+}
+.contact_form{
+	height: 500px;
+}
+.contact_form .main_width {
+	height: 500px;
+}
+.form input[type=text], .form textarea {
+	width: 60%;
+	margin-bottom: 25px;
+	font-size: 22px;
+	padding:10px;
+	border: 1px solid #24baa0;
+}
+
+.form input[type=submit] {
+	display: block;
+	width: 340px;
+	height: 65px;
+	background-color: #24baa0;
+	border: 1px solid #24baa0;
+	border-radius: 5px;
+	position: absolute;
+	right:30px;
+	bottom: 60px;
+	text-align: center;
+	color: white;
+	font-size: 22px;
+}
+/**, *:after, *:before {
+  box-sizing: border-box;
+}
+.checkbox {
+  position: relative;
+}
+.checkbox input {
+  display: block;
+  opacity: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+}
+.checkbox label {
+  display: block;
+  padding-left: 65px;
+  position: relative;
+}
+.checkbox label::before,
+.checkbox label::after {
+  border: 1px solid red;
+  content: "";
+  display: block;
+  left: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  top: 0;
+}
+.checkbox label::after {
+  background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A') no-repeat center;
+  border: 0;
+  display: none;
+}
+.checkbox input:checked + label::after {
+  display: block;
+}*/
+label {
+	width:20px;
+	height: 20px;
+	padding: 20px;
+}
+.checbox input, label {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #24baa0;
+	position: absolute;
+	right:325px;
+	bottom: 150px;
+}
+
+.checbox input,label a:hover {
+	background-image: url("../images/form_ok.png");
+}
+
+.checkbox .photo {
+	width: 450px;
+	height:337px;
+  background-image: url("../images/red_chair.png");
+  background-repeat: no-repeat;
+	position:absolute;
+	right:0;
+	left: 700px;
+	bottom: 80px;
+	/*margin: 50px 25px 50px 50px;*/
+}
+
+/* end of form*/
+
+/*FOOTER*/
+
+footer .main_width {
+	height: auto;
+}
+
+footer h4{
+	float: left;
+	color:#9b9b9b;
+}
+
+span.mark {
+	float: right;
+	color:#9b9b9b;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+ul.social_icons {
+	/*display: inline-block;*/
+	position: absolute;
+	top: 0;
+	left: 700px;
+}
+
+.social_icons li{
+	display: inline-block;
+}
+
+.fr_icon {
+	width: 35px;
+	height: 35px;
+	background-image: url("../images/flickr.png");
+}
+.vim_icon {
+	width: 35px;
+	height: 35px;
+	background-image: url("../images/vimeo.png");
+}
+.pint_icon {
+	width: 35px;
+	height: 35px;
+	background-image: url("../images/pinterest.png");
+}
+.twit_icon {
+	width: 35px;
+	height: 35px;
+	background-image: url("../images/twitter.png");
+}
