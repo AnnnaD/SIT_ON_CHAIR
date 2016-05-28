@@ -6,6 +6,7 @@
     <title></title>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -13,11 +14,11 @@
         <nav class="main_width">
             <ul class="navigation">
                 <li id="logotype">Sit <span>on</span> chair</li>
-                <li><a href="#">O firmie</a>
-                    <ul class="after">
-                        <li>Aktualności</li>
-                        <li>Nasz team</li>
-                        <li>Historia</li>
+                <li id = "about_company"><a href="#">O firmie</a>
+                    <ul class="after" class=".after_two">
+                        <li><a href ="#">Aktualności</a></li>
+                        <li><a href ="#">Nasz team</a></li>
+                        <li><a href ="#">Historia</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Galeria</a></li>
@@ -47,8 +48,8 @@
     <section class="gallery">
         <article class="main_width">
             <div class="gallery_boxes">
-                <div class="first_box"><a href="#"><h3>Chair CLAIR</h3></a></div>
-                <div class="second_box"><a href="#"><h3>Chair MARGARITA</h3></a></div>
+                <div class="first_box"><a href="#" class="model"><h3>Chair CLAIR</h3></a></div>
+                <div class="second_box"><a href="#" class = "model"><h3>Chair MARGARITA</h3></a></div>
                 <div class="third_box">
                     <a href="#">Finds all inputs</a>
                     <p>Sed sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos quiratione voluptatem sequi nesciunt.
@@ -182,6 +183,8 @@
     <section class="contact_form">
         <article class="main_width">
             <h3>KONTAKT</h3>
+            <div class="photo">
+            </div>
             <form class="form">
                 <input type="text" name="name" placeholder="Imie">
                 <input type="text" name="email" placeholder="email">
@@ -189,11 +192,8 @@
                 <input type="submit" value="WYSLIJ">
                 <a href="#">
                     <div class="checkbox">
-                        <div class="photo">
-                        </div>
-                        <!-- <p>Zgadzam sie na przetwarzanie danych osobowych</p> -->
-                        <input type="checkbox" name="agreement" value="agree">
-                        <label for="agreement">Zgadzam się na przetwarzanie danych osobowych</label>
+                        <input type="checkbox" name="agreement" id="agree">
+                        <label for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
                     </div>
                 </a>
             </form>
@@ -203,10 +203,10 @@
         <article class="main_width">
             <h4>Copyright 2014 All Rights Reserved - Sit On Chair</h4><span class="mark">SIT ON CHAIR</span>
             <ul class="social_icons">
-                <li class="fr_icon"></li>
-                <li class="vim_icon"></li>
-                <li class="pint_icon"></li>
-                <li class="twit_icon"></li>
+                <li class="flickr_icon"></li>
+                <li class="vimeo_icon"></li>
+                <li class="pinterest_icon"></li>
+                <li class="twitter_icon"></li>
             </ul>
         </article>
     </footer>
